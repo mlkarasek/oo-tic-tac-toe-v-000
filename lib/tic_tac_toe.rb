@@ -36,14 +36,9 @@ class TicTacToe
 
 	def valid_move?(index)
 		index = input_to_index(index)
-    if (0..8).include?(index)
-        if position_taken?(index)== false || position_taken?(index)== nil
-        true
-      else
-        false
+		if position_taken?(index) == false && index.between?(0,8) == true ? true : false
 	end
-end
-end 
+
 	def turn
 		puts "Please enter 1-9:"
 		index = gets.strip
