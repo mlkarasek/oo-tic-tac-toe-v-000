@@ -47,7 +47,7 @@ class TicTacToe
     if isValid == true
       move(index, current_player)
     else
-      puts "You have entered an invalid move"
+      puts "Try again."
       turn
     end
     display_board
