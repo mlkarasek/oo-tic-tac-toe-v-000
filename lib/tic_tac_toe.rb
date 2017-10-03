@@ -71,20 +71,20 @@ class TicTacToe
 
   def won?
     WIN_COMBINATIONS.each do |winCombo|
-        posArray = [] #reset the posArray
+        posArray = []
 
         winCombo.each do |position|
           posArray << @board[position]
-        end #end of a specific win combo loop
+        end 
 
         if posArray[0] == posArray[1] && posArray[1] == posArray[2] && posArray[0] != " "
           return winCombo
         end
 
-    end #end of win combinations loop
+    end 
 
     return false
-  end #end of won? def
+  end 
 
   def full?
     if @board.include?(" ")
