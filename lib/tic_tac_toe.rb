@@ -1,6 +1,6 @@
 class TicTacToe
 
-	WIN_COMBINATIONS = [	[ 0, 1, 2 ],
+	WIN_COMBINATIONS = [	[ 0, 1, 2 ], 
 				[ 3, 4, 5 ],
 				[ 6, 7, 8 ],
 				[ 0, 4, 8 ],
@@ -36,7 +36,7 @@ class TicTacToe
 
 	def valid_move?(index)
 		index = input_to_index(index)
-		if position_taken?(index) == false && index.between?(0,8) == true ? true : false
+		position_taken?(index) == false && index.between?(0,8) == true ? true : false
 	end
 
 	def turn
