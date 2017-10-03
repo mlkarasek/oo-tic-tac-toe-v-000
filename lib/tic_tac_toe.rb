@@ -107,8 +107,12 @@ class TicTacToe
   end
 
   def winner
-    if won? != nil
-    winner = @board[won?[0]]
+    if won? == false
+      nil
+    elsif @board[won?[0]] == "X"
+      "X"
+    elsif @board[won?[1]] == "O"
+      "O"
     end
   end
 
