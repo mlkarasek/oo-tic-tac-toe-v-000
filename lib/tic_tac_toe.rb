@@ -3,18 +3,7 @@ class TicTacToe
     @board = Array.new(9," ")
   end
 
-  WIN_COMBINATIONS = [
-    [0,1,2],  # Top row
-    [3,4,5],  # Middle row
-    [6,7,8],  # Bottom row
-
-    [0,4,8],  #first diagonal
-    [2,4,6],  #second diagonal
-
-    [0,3,6],  # Left column
-    [1,4,7],  # Middle column
-    [2,5,8]  # Bottom column
-  ]
+  WIN_COMBINATIONS= [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
