@@ -38,7 +38,7 @@ class TicTacToe
 
   def valid_move?(input)
     index = input.to_i - 1
-    !@board index.between?(0,8) && !position_taken?(index)
+    !index.between?(0,8) && !position_taken?(index)
   end
 
   def turn
