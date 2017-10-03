@@ -81,7 +81,7 @@ class TicTacToe
 		end
 
 		if (draw? == true)
-		puts "Cats Game!"
+		puts "Cat's Game!"
 		else puts "Congratulations #{winner}!"
 		end
 	end
