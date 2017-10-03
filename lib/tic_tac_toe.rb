@@ -47,7 +47,7 @@ class TicTacToe
     if isValid == true
       move(index, current_player)
     else
-      puts "Try again."
+      puts "Invalid move."
       turn
     end
     display_board
@@ -75,16 +75,16 @@ class TicTacToe
 
         winCombo.each do |position|
           posArray << @board[position]
-        end 
+        end
 
         if posArray[0] == posArray[1] && posArray[1] == posArray[2] && posArray[0] != " "
           return winCombo
         end
 
-    end 
+    end
 
     return false
-  end 
+  end
 
   def full?
     if @board.include?(" ")
