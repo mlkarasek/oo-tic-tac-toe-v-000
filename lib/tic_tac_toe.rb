@@ -25,8 +25,9 @@ class TicTacToe
 		@index = index.to_i - 1
 	end
 
-  def move(location, token)
-     @board[location.to_i-1] = token
+	def move(index, character = "X")
+		index = input_to_index(index)
+		@board[index] = character
 	end
 
 	def position_taken?(index)
@@ -72,14 +73,15 @@ class TicTacToe
 		combo != nil ? @board[combo[0]] : nil
 	end
 
-  def play
-    while !over?		
-       turn
-     end
-     if won?
-         puts "Congratulations #{winner}!"
-    elsif draw?
-       puts "Cats Game!"
-    end
+	def play
+
+		while over? == false
+		turn
+		end
+
+		if (draw? == true)
+		puts "Cat's Game!"
+		else puts "Congratulations #{winner}!"
+		end
 	end
 end
