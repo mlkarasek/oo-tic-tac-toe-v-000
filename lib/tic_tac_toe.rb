@@ -4,6 +4,8 @@ class TicTacToe
     @board = board || Array.new(9, " ")
   end 
 
+  WIN_COMBINATIONS= [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
+
     def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -17,11 +19,11 @@ def input_to_index(user_input)
 end
 
 def move(board, index, current_player = "X")
-  board[index] = current_player
+  @board[index] = current_player
 end
 
 def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+  @board[location] != " " && board[location] != ""
 end
 
 def valid_move?(board, index)
@@ -40,7 +42,6 @@ def turn(board)
   end
 end
 
-# Define your play method below
 def play(board)
   counter = 0
 while counter < 9
@@ -59,7 +60,7 @@ def turn_count(board)
 	  end
 	  turns
 	end
-	
+
 
 	def current_player(board)
 	  turns = turn_count(board)
@@ -74,7 +75,6 @@ def position_taken?(board, index)
 end
 
 # Define your WIN_COMBINATIONS constant
-WIN_COMBINATIONS= [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 
 def won?(board)
 WIN_COMBINATIONS.detect do |position|
@@ -117,5 +117,4 @@ def winner(board)
  else
   nil
  end
-end 
-
+end
