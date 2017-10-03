@@ -1,6 +1,6 @@
 class TicTacToe
 
-  def initialize(board)
+  def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
 
@@ -19,11 +19,7 @@ class TicTacToe
   end
 
   def position_taken?(position)
-    if @board[position] == "X" || @board[position] == "O"
-      true
-    else
-      false
-    end
+    !@board[position].nil? || @board[position] == " "
   end
 
   def valid_move?(position)
